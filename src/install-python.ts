@@ -31,7 +31,7 @@ export async function findReleaseFromManifest(
 async function installPython(workingDirectory: string) {
   const options: ExecOptions = {
     cwd: workingDirectory,
-    silent: true,
+    silent: false,
     listeners: {
       stdout: (data: Buffer) => {
         core.debug(data.toString().trim());
